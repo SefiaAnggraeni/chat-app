@@ -8,27 +8,18 @@
     <title>CaremaL</title>
 
     <!-- Vendor CSS Files -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"> <!--ini untuk mengatur layout nya biar rapi -->
     <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet"> 
     <style>
 
         /* Global Styles */
         body {
-            /* padding-top: 30px;  */
-            /* Sesuaikan dengan tinggi navbar */
-            /* padding-left: 100px;
+            padding-top: 30px; /* Sesuaikan dengan tinggi navbar */
+            padding-left: 100px;
             padding-right: 20px;
-            background-color: #EDFDFB; */
-            font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+            background-color: #EDFDFB;
         }
-        a {
-    text-decoration: none;
-    color: #000;
-}
+
         /* Navbar */
         .navbar {
             position: fixed; /* Membuat navbar tetap berada di bagian atas */
@@ -41,16 +32,6 @@
             padding: 10px 20px; /* Menambah padding kanan agar lebih menjorok ke kanan */
             background-color: #EDFDFB;
         }
-        @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .navbar-left, .navbar-right {
-        margin-bottom: 10px;
-    }
-}
 
         .navbar .logo {
             width: 200px;
@@ -167,10 +148,6 @@
                 text-align: center;
                 color: rgba(6, 17, 19, 0.9);
             }
-            .navbar {
-    z-index: 9999;
-}
-
             .cta-button {
                 position: absolute;
                 width: 323px;
@@ -210,14 +187,14 @@
                 top: 100px;
             }
             .mockup-container img {
-                width: 600px;
-                height: 650px;
-                margin-right: 20px;
+                width: 500px;
+                height: 550px;
+                margin-left: 70px;
                 /*top: 100px;*/
                 
             }
 
-            
+
         .search-bar {
             display: flex;
             align-items: center;
@@ -286,7 +263,53 @@
             font-size: 14px;
             color: #005C7B;
         }
+    </style>
+</head>
 
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="{{ asset('assets/img/CAREMAL (7).png') }}" alt="CaremaL Logo" class="logo">
+            {{-- <span class="brand-name">CaremaL</span> --}}
+        </div>
+        <div class="logo"></div>
+
+        <div class="menu">
+            <a href="#" class="masuk">MASUK</a>
+            <a href="#" class="daftar-btn">DAFTAR</a>
+            <a href="#" class="language-switch">EN</a>
+        </div>
+        <div class="line-vertical"></div>
+    </div>
+
+    
+    <!-- Header -->
+<div class="header-container">
+    <div class="header">
+        <h1 class="main-title">CaremaL</h1>
+        <div class="rectangle-a"></div>
+        <div class="subtitle-image-container">
+        <div class="subtitle">Peduli Hewan, Ciptakan Dunia Lebih Baik Bersama Caremal</div>
+        <div class="image"></div>
+    </div>
+        <div class="cta-button">
+            <a href="#" class="cta-btn">KONTAK DARURAT</a>
+            <img class="call_darurat" src="assets/img/call darurat.png" alt="..." />
+        </div>
+    </div>
+</div>
+        <!-- Mockup -->
+        <div class="mockup-container">
+            <img src="assets/img/CAREMAL (10).png" class="img-fluid animated" alt="">
+        </div>
+    </div>
+
+    <!-- Artikel Info -->
+    <div class="artikel-info">ARTIKEL</div>
+    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
+    
+    <style>
         .artikel-info {
             position: absolute;
             width: 180px;
@@ -313,6 +336,39 @@
             font-size: 30px;
             color: rgba(0, 92, 123, 0.5);
         }
+        
+    </style>
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <img src="assets/img/Search.png" alt="Search Icon">
+            <input type="text" placeholder="Cari di CaremaL">
+        </div>
+    
+
+    <!-- Articles Section -->
+    <section class="articles">
+        <div class="article">
+            <img src="{{ asset('assets/img/CAREMAL (12).png') }}" alt="Article 1">
+            <h2>Pertolongan Pertama</h2>
+            <p>Konten deskripsi singkat</p>
+        </div>
+        <div class="article">
+            <img src="{{ asset('assets/img/CAREMAL (14).png') }}" alt="Article 2">
+            <h2>Hewan Ternak</h2>
+            <p>Konten deskripsi singkat</p>
+        </div>
+        <div class="article">
+            <img src="{{ asset('assets/img/CAREMAL (17).png') }}" alt="Article 3">
+            <h2>Hewan Peliharaan</h2>
+            <p>Konten deskripsi singkat</p>
+        </div>
+    </section>
+
+        <!-- Lebih lanjut -->
+        <div class="selanjutnya">
+            <a href="{{ route('artikel') }}" class="btn-selanjutnya">Lebih Lanjut</a>
+        </div>
+    <style>
         .btn-selanjutnya {
             display: flex;
             align-items: center;
@@ -337,7 +393,82 @@
                 background-color: #458FF6;
                 color: white;
             }
-            .sidebar {
+    </style> 
+</body>
+</html>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <!-- Beranda -->
+    <div class="sidebar-item" id="beranda">
+        <div class="rectangle">
+        <a href="#beranda"><img src="assets/img/icon house.png" alt="Beranda Icon"></a>
+        </div>
+        <!--<div class="description">Beranda: Halaman utama.</div>-->
+    </div>
+
+    <!-- Artikel -->
+    <div class="sidebar-item" id="artikel">
+        <div class="rectangle">
+        <a href="{{ route('artikel') }}"><img src="assets/img/icon artikel.png" alt="Artikel Icon"></a>
+        </div>
+        <!--<div class="description">Artikel: Baca berbagai artikel.</div>-->
+    </div>
+
+    <!-- Kontak Darurat -->
+    <div class="sidebar-item" id="kontak-darurat">
+        <div class="rectangle">
+        <a href="#kontak-darurat"><img src="assets/img/icon phone.png" alt="Kontak Darurat Icon"></a>
+        </div>
+        <!--<div class="description">Kontak Darurat: Hubungi nomor darurat.</div>-->
+    </div>
+
+    <!-- Puskeswan -->
+    <div class="sidebar-item" id="puskeswan">
+        <div class="rectangle">
+        <a href="#puskeswan"><img src="assets/img/hospital icon.png" alt="Puskeswan Icon"></a>
+        </div>
+        <!--<div class="description">Puskeswan: Temukan puskeswan terdekat.</div>-->
+    </div>
+</div>
+
+
+
+<!--<script>
+function toggleDescription(id) {
+    var description = document.getElementById(id);
+    var descriptions = document.querySelectorAll('.description');
+    
+    // Sembunyikan semua deskripsi
+    descriptions.forEach(function(desc) {
+        desc.style.display = 'none';
+    });
+
+    // Tampilkan deskripsi yang diklik
+    description.style.display = (description.style.display === 'block') ? 'none' : 'block';
+}
+</script>-->
+<!--Java Script-->
+<script>
+function toggleDescription(id) {
+    var item = document.getElementById(id);
+    var items = document.getElementsByClassName('sidebar-item');
+    
+    // Hide descriptions of all items
+    for (var i = 0; i < items.length; i++) {
+        items[i].classList.remove('active');
+    }
+
+    // Show the description of the clicked item
+    item.classList.toggle('active');
+}
+</script>
+
+
+    <!-- CSS -->
+    <style>
+    /* Sidebar Container */
+    .sidebar {
         position: fixed;
         top: 100px;
         left: 10px;
@@ -432,206 +563,4 @@
             left: 90px;
         }
     }
-    .btn-custom {
-  border-radius: 15px; /* Membuat tombol menjadi lonjong */
-  padding: 10px 20px; /* Mengatur padding agar tombol lebih besar */
-  font-size: 16px;/* Menyesuaikan ukuran teks tombol */
-   background-color: #7EBEF1; /* Warna latar belakang tombol 'Ubah' */
-  color: #fff; /* Warna teks tombol */
-}
-        
     </style>
-</head>
-<body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="navbar-left">
-            <img src="{{ asset('assets/img/CAREMAL (7).png') }}" alt="CaremaL Logo" class="logo">
-            {{-- <span class="brand-name">CaremaL</span> --}}
-        </div>
-        <div class="logo"></div>
-
-        <div class="menu">
-            <a href="{{ route('login') }}" class="masuk">MASUK</a>
-            <a href="{{route('register')}}" class="daftar-btn">DAFTAR</a>
-            <a href="#" class="language-switch">EN</a>
-        </div>
-        <div class="line-vertical"></div>
-    </div>
-
-    
-    <!-- Header -->
-    <div class="header-container">
-        <div class="header">
-            <h1 class="main-title">CaremaL</h1>
-            <div class="rectangle-a"></div>
-            <div class="subtitle">Nam sollicitud nunc, cursus eros vulputate sed. Vestibulum lobortis.</div>
-            <div class="cta-button">
-                <a href="#kontakDaruratModal" class="cta-btn" data-bs-toggle="modal" data-bs-target="#kontakDaruratModal">KONTAK DARURAT</a>
-            </div>
-        </div>
-
-        <!-- Mockup -->
-        <div class="mockup-container">
-            <img src="assets/img/CAREMAL (10).png" class="img-fluid animated" alt="">
-        </div>
-    </div>
-
-    <!-- Artikel Info -->
-    <div class="artikel-info">ARTIKEL</div>
-    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</div>
-    
-    
-        <!-- Search Bar -->
-        <div class="search-bar">
-            <img src="assets/img/Search.png" alt="Search Icon">
-            <input type="text" placeholder="Cari di CaremaL">
-        </div>
-    
-
-    <!-- Articles Section -->
-    <section class="articles">
-        <div class="article">
-            <img src="{{ asset('assets/img/CAREMAL (12).png') }}" alt="Article 1">
-            <h2>Pertolongan Pertama</h2>
-            <p>Konten deskripsi singkat</p>
-        </div>
-        <div class="article">
-            <img src="{{ asset('assets/img/CAREMAL (14).png') }}" alt="Article 2">
-            <h2>Hewan Ternak</h2>
-            <p>Konten deskripsi singkat</p>
-        </div>
-        <div class="article">
-            <img src="{{ asset('assets/img/CAREMAL (17).png') }}" alt="Article 3">
-            <h2>Hewan Peliharaan</h2>
-            <p>Konten deskripsi singkat</p>
-        </div>
-    </section>
-
-        <!-- Lebih lanjut -->
-        <div class="selanjutnya">
-            <a href="{{ route('artikel') }}" class="btn-selanjutnya">Lebih Lanjut</a>
-        </div>
-
-
-<!-- Sidebar -->
-<div class="sidebar">
-    <!-- Beranda -->
-    <div class="sidebar-item" id="beranda">
-        <div class="rectangle">
-        <a href="#beranda"><img src="assets/img/icon house.png" alt="Beranda Icon"></a>
-        </div>
-        <div class="description">Beranda: Halaman utama.</div>
-    </div>
-
-    <!-- Artikel -->
-    <div class="sidebar-item" id="artikel">
-        <div class="rectangle">
-        <!--<a href="{{ route('artikel') }}">--> <img src="assets/img/icon artikel.png" alt="Artikel Icon"></a>
-        </div>
-        <!--<div class="description">Artikel: Baca berbagai artikel.</div>-->
-    </div>
-
-    <!-- Kontak Darurat -->
-    <div class="sidebar-item" id="kontak-darurat">
-        <div class="rectangle">
-        <a href="#kontak-darurat"><img src="assets/img/icon phone.png" alt="Kontak Darurat Icon"></a>
-        </div>
-        <!--<div class="description">Kontak Darurat: Hubungi nomor darurat.</div>-->
-    </div>
-
-    <!-- Puskeswan -->
-    <div class="sidebar-item" id="puskeswan">
-        <div class="rectangle">
-        <a href="#puskeswan"><img src="assets/img/hospital icon.png" alt="Puskeswan Icon"></a>
-        </div>
-        <!--<div class="description">Puskeswan: Temukan puskeswan terdekat.</div>-->
-    </div>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="kontakDaruratModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="max-width: 90%;">
-        <div class="modal-content modal-content-scrollable">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <table class="table">
-                    <thead style="background-color: #7EBEF1 !important; color: #fff !important;">
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Nama</th>
-                            <th scope="col">No. Telp</th>
-                            <th scope="col">Asal Instansi</th>
-                            <th scope="col">Status</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                        @if (!isset($data) || $data->isEmpty())
-                        <tr>
-                            <td colspan="6" class="text-center">Data Kosong</td>
-                        </tr>
-                        @else
-                            @foreach ($data as $row)
-                        <tr>
-                            <th scope="row">{{ $loop->iteration }}</th>
-                            <td>{{ $row->nama }}</td>
-                            <td>{{ $row->telepon }}</td>
-                            <td>{{ $row->alamat_shelter }}</td>
-                            <td>
-                                <a href="https://wa.me/{{$row->telepon}}" target="_blank">
-                                    <button type="button" class="btn btn-primary">
-                                        Hubungi Sekarang
-                                    </button>
-                                </a>
-                            </td>      
-                        </tr>
-                        @endforeach
-                        @endif
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    // Open Modal
-function openModal() {
-    document.getElementById("contactModal").style.display = "block";
-}
-
-// Close Modal
-function closeModal() {
-    document.getElementById("contactModal").style.display = "none";
-}
-
-// Close modal when clicking outside of the modal content
-window.onclick = function(event) {
-    if (event.target == document.getElementById("contactModal")) {
-        closeModal();
-    }
-}
-
-function toggleDescription(id) {
-    var item = document.getElementById(id);
-    var items = document.getElementsByClassName('sidebar-item');
-    
-    // Hide descriptions of all items
-    for (var i = 0; i < items.length; i++) {
-        items[i].classList.remove('active');
-    }
-
-    // Show the description of the clicked item
-    item.classList.toggle('active');
-}
-</script>
-<script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
